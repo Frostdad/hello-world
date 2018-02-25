@@ -20,7 +20,7 @@ Read the documentation for the Hello World service and test them to make sure th
 Once you understand their usage, use preferred tools and technology to create automation that stands up local dev environment of the stack.
 
 
-create an efficient docker image based on best practices for the hellow world service. Be prepared to explain your approach.
+create an efficient docker image based on best practices for the hello world service. Be prepared to explain your approach.
 
 
-Make the dev environment automation available via a public github repo with any instructions on how to run your dev environment in an accompanying README.md file. Send it in and be prepared to discuss it.
+Make the dev environment automation available via a public github repo with any instructions on how to run your dev environment in an accompanying README.md file. Please send it as this will be discussed during the interview.
