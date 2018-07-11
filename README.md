@@ -1,26 +1,51 @@
 # hello-world
 
-#Sample Tool Stack : Jenkins , Vagrant , Ansible
+# Sample Tool Stack : Jenkins, Docker
 
-This is sample Spring Boot application
+Hi,
 
-To test the sample application execute the following commands:
+This is a simple harness for spring-boot app.
 
-mvn package
-mvn spring-boot:run
+Consists of two docker containers:
+- fetchr
+  - runs Jenkins and builds spring app
+- spring
+  - openjdk alpine based app runner
 
-to hit the localhost after:
-http://localhost:8080
+Assumptions: Ubuntu/Debian Linux distro
 
-Your Task
+1. Setup docker
+```
+docker_setup.sh
+```
+2. Setup whole environment
+```
+fetchr.sh
+```
+3. Check if app is up and running `http:\\localhost:5000`, Jenkins is at `http:\\localhost:8080`
 
-Your next task is to take the recently built hello-world service:
+4. Cleanup
+```
+cleanup.sh
+```
 
-Read the documentation for the Hello World service and test them to make sure they work as expected.
-Once you understand their usage, use preferred tools and technology to create automation that stands up local dev environment of the stack.
+### What is being created
+
+  Jenkins container is a clone of jenkins:jenkins
+
+  Spring container is openjdk alpine for size and simplicity.
+
+#### What's been left out due to time constraints
+
+Switch to jenkins alpine.
+
+Have Jenkins build Spring app image and deploy to it instead of having external call.
+
+Add tests (even simple ones to hit endpoint to see if it's up)
+
+It's pretty barebone, but I'll happily talk it over.
 
 
-create an efficient docker image based on best practices for the hello world service. Be prepared to explain your approach.
+Best Regards
 
-
-Make the dev environment automation available via a public github repo with any instructions on how to run your dev environment in an accompanying README.md file. Please send it as this will be discussed during the interview.
+Denis Frost
